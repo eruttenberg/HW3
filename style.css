@@ -1,0 +1,19 @@
+body {
+	color : Black;
+	background-color: gray;
+	font-size: 20 pt;
+	font-family: Veranda, Geneva, Arial, Helvetica, Sans-serif;
+	text-align:center;
+	margin:20px
+}
+
+#calculator{
+	color:white;
+	background-color:blue;
+}
+
+h1{
+	color: white;
+	font size: 24 pt;
+	
+}
