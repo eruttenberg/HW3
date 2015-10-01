@@ -18,13 +18,13 @@
                         <tr>
                             <td> Hours Worked:</td>
                             <td> 
-                                <input type="number" name="hoursWorked" value="" size="50">
+                                <input type="number" name="hoursWorked" value="" size="50" required>
                             </td>
                         </tr>
                         <tr>
                             <td> Hourly Pay: </td>
                             <td> 
-                                <input type="number" name="hourlyPay" value="" size="50">
+                                <input type="number" name="hourlyPay" value="" size="50" required>
                             </td>
                         </tr>
                         <tr>
