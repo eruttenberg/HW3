@@ -9,6 +9,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css" />
         <title>Results</title>
     </head>
     <%
@@ -19,13 +20,21 @@
         
         Double hoursOvertime = totalHoursWorked - 40;
         Double overtimeHourlyRate = hourlyRate * 1.5;
-        Double grossPay = ((totalHoursWorked - hoursOvertime) * hourlyRate) + (hoursOvertime * overtimeHourlyRate);
-        Double preTaxPay = grossPay - preTaxDeduct;
+        Double grossPay = 0.0;
+        Double preTaxPay = 0.0;
         Double tax1 = .18;
         Double tax2 = .22;
         Double taxAmount = 0.0;
         Double postTaxPay = 0.0;
         Double netPay = 0.0; 
+        
+        if (totalHoursWorked <= 40) {
+                grossPay = totalHoursWorked * hourlyRate;
+            }
+        else { grossPay = ((totalHoursWorked - hoursOvertime) * hourlyRate) + (hoursOvertime * overtimeHourlyRate);
+            }
+        
+        preTaxPay = grossPay - preTaxDeduct;
         
         if (grossPay <= 500){ 
         taxAmount = (grossPay - preTaxDeduct) * tax1;
@@ -35,11 +44,14 @@
         postTaxPay= preTaxPay - taxAmount;
         netPay = postTaxPay - postTaxDeduct;
         
+        
         %>
     
     <body>
         <h1>Salary Info</h1>
         <hr>
+        
+        
          <table border="2">
                     <tbody>
                         <tr>
@@ -86,5 +98,6 @@
                         </tr>
                     </tbody>
                 </table>
+    </div>
     </body>
 </html>

@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
         <body>
+            <h1> Salary Calculator </h1>
+            <hr>
             <form name="salaryCalculator" action="results.jsp" method="post">
                 <table border="2">
                     <tbody>
